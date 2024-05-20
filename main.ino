@@ -39,7 +39,6 @@ void setup()
             { request->send(SPIFFS, "/vendors/jvectormap/jquery-jvectormap-world-mil-en.js", "application/javascript"); });
   server.on("/vendors/jvectormap/jquery-jvectormap.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/vendors/jvectormap/jquery-jvectormap.css", "text/css"); });
-  server.on("/vendors/jvectormap/jquery-jvectormap.js", handleJVectorJS);
   server.on("/vendors/jvectormap/jquery-jvectormap.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/vendors/jvectormap/jquery-jvectormap.js", "application/javascript"); });
   ws.onEvent(onEvent);
@@ -49,13 +48,15 @@ void setup()
 }
 
 void loop()
-{
-  server.handleClient();
-  int sensorValue = analogRead(sensorPin);           // Read the voltage sensor
-  float voltage = sensorValue * (3.3 / 4095.0) * 10; // Convert ADC value to voltage (3.3V is ESP32 maximum voltage)
+{  int sensorValue = analogRead(sensorPin); // Read the voltage sensor
+  float voltage = sensorValue * (3.3 / 4095.0)*10; // Convert ADC value to voltage (3.3V is ESP32 maximum voltage)
+
   Serial.print("Voltage: ");
   Serial.print(voltage, 1); // Print voltage with 2 decimal places
   Serial.println(" V");
+
+  delay(100); // Wait for a second before taking the next reading
+
   // Send battery data to connected clients
   ws.textAll(String(voltage));
   ws.cleanupClients();
