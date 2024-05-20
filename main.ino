@@ -2,7 +2,6 @@
 #include <WebServer.h>
 #include <SPIFFS.h>
 #include <ESPAsyncWebServer.h>
-#include <random>
 
 const char *ssid = "pv10";
 const char *password = "12345678";
@@ -180,24 +179,6 @@ void loop()
   ws.cleanupClients();
 
   delay(50); // Update interval
-}
-
-String getBatteryData()
-{
-  // Start generating random numbers and sending them via WebSocket
-  randomSeed(analogRead(0));
-  int randomNumber1 = random(1000);
-  int randomNumber2 = random(1000);
-  Serial.println("Random Number1: " + String(randomNumber1));
-  Serial.println("Random Number2: " + String(randomNumber2));
-
-  // Convert battery data to JSON format
-  String data = "{\"batteryPercentage\":";
-  data += String(randomNumber1);
-  data += ",\"batteryVoltage\":";
-  data += String(randomNumber2);
-  data += "}";
-  return data;
 }
 
 void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)
