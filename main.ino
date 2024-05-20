@@ -33,8 +33,10 @@ void setup()
             { request->send(SPIFFS, "/js/todolist.js", "application/javascript"); });
   server.on("/vendors/css/vendor.bundle.base.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/vendors/css/vendor.bundle.base.css", "text/css"); });
-  server.on("/vendors/js/vendor.bundle.base.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/vendors/js/vendor.bundle.base.js", "application/javascript"); });
+  server.on("/vendors/js/bsbundle.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/vendors/js/bsbundle.js", "application/javascript"); });
+  server.on("/vendors/js/jquery.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/vendors/js/jquery.js", "application/javascript"); });
   server.on("/vendors/jvectormap/jquery-jvectormap-world-mil-en.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/vendors/jvectormap/jquery-jvectormap-world-mil-en.js", "application/javascript"); });
   server.on("/vendors/jvectormap/jquery-jvectormap.css", HTTP_GET, [](AsyncWebServerRequest *request)
@@ -48,8 +50,9 @@ void setup()
 }
 
 void loop()
-{  int sensorValue = analogRead(sensorPin); // Read the voltage sensor
-  float voltage = sensorValue * (3.3 / 4095.0)*10; // Convert ADC value to voltage (3.3V is ESP32 maximum voltage)
+{
+  int sensorValue = analogRead(sensorPin);           // Read the voltage sensor
+  float voltage = sensorValue * (3.3 / 4095.0) * 10; // Convert ADC value to voltage (3.3V is ESP32 maximum voltage)
 
   Serial.print("Voltage: ");
   Serial.print(voltage, 1); // Print voltage with 2 decimal places
