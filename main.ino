@@ -1,13 +1,12 @@
 #include <WiFi.h>
-#include <WebServer.h>
 #include <SPIFFS.h>
+#include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
 const char *ssid = "pv10";
 const char *password = "12345678";
 const int sensorPin = 2; // Pin connected to the voltage sensor
-
-WebServer server(80);
+AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
 
 void handleRoot()
@@ -150,7 +149,24 @@ void setup()
     return;
   }
   Serial.println("SPIFFS mounted successfully");
-  server.on("/", handleRoot);
+//  server.on("/", handleRoot);
+server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {
+    request->send(SPIFFS, "/index.html", "text/html");
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   server.on("/css/style.css", handleCustomCSS);
   server.on("/js/dashboard.js", handleDashboardJS);
   server.on("/js/misc.js", handleMISCJS);
@@ -175,7 +191,7 @@ void loop()
   Serial.print(voltage, 1); // Print voltage with 2 decimal places
   Serial.println(" V");
   // Send battery data to connected clients
-  ws.textAll(voltage);
+  ws.textAll(String(voltage));
   ws.cleanupClients();
 
   delay(50); // Update interval
