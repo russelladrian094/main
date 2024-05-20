@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PV 010 Admin</title>
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="vendors/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </button>
+        <!-- LOGO HERE -->
+        <!-- <a class="sidebar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a> -->
+      </div>
+      <!-- ***********************************NAVBAR ITEMS****************************************** -->
+      <ul class="nav">
+        <li class="nav-item nav-category">
+          <span class="nav-link">----- > Let The Fun Begin !</span>
+        </li>
+        <!-- Dashboard -->
+        <li class="nav-item menu-items active">
+          <a class="nav-link custom-nav-link" href="#" data-view-id="#dashboardView">
+            <span class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-speedometer" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                <path fill-rule="evenodd"
+                  d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+              </svg>
+            </span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <!-- Engine Control -->
+        <li class="nav-item menu-items">
+          <a class="nav-link custom-nav-link" href="#" data-view-id="#engineControlView">
+            <span class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z" />
+              </svg>
+            </span>
+            <span class="menu-title">Engine Control</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link custom-nav-link" href="#" data-view-id="#lightControlView">
+            <span class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z" />
+              </svg>
+            </span>
+            <span class="menu-title">Light Control</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial -->
+      <div class="main-panel pt-0">
+        <div id="dashboardView" class="content-wrapper">
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="d-flex align-items-center align-self-start">
+                        <h3 class="mb-0">12.5</h3>
+                        <h3 class="text-success ms-2 mb-0 font-weight-medium">v</h3>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="icon icon-box-success ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="text-muted font-weight-normal">Battery Status</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="d-flex align-items-center align-self-start">
+                        <h3 class="mb-0">79</h3>
+                        <h3 class="text-success ms-2 mb-0 font-weight-medium">c</h3>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="icon icon-box-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="text-muted font-weight-normal">Coolant Temperature</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="d-flex align-items-center align-self-start">
+                        <h3 class="mb-0">150</h3>
+                        <h3 class="text-danger ms-2 mb-0 font-weight-medium">c</h3>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="icon icon-box-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-graph-down-arrow" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M0 0h1v15h15v1H0zm10 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.6l-3.613-4.417a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61L13.445 11H10.5a.5.5 0 0 0-.5.5" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="text-muted font-weight-normal">Engine Temperature</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="d-flex align-items-center align-self-start">
+                        <h3 class="mb-0">35L</h3>
+                        <p class="text-success ms-2 mb-0 font-weight-medium">78.2%</p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="icon icon-box-success ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="text-muted font-weight-normal">Fuel Level</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title text-center">Weather Station</h4>
+                  <div class="position-relative">
+                    <div class="daoughnutchart-wrapper">
+                      <canvas id="transaction-history" class="transaction-chart"></canvas>
+                    </div>
+                    <div class="custom-value">20.5 <span>Set</span>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-4">
+                      <h6 class="mb-1">Outside</h6>
+                    </div>
+                    <div class="col-4">
+                      <h6 class="font-weight-bold mb-0">41.5c</h6>
+                    </div>
+                    <div class="col-4">
+                      <h6 class="font-weight-bold mb-0">55%</h6>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-4">
+                      <h6 class="mb-1">Room</h6>
+                    </div>
+                    <div class="col-4">
+                      <h6 class="font-weight-bold mb-0">23.3c</h6>
+                    </div>
+                    <div class="col-4">
+                      <h6 class="font-weight-bold mb-0">15%</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <h4 class="card-title">Messages</h4>
+                    <p class="text-muted mb-1 small">View all</p>
+                  </div>
+                  <div class="preview-list">
+                    <div class="preview-item border-bottom">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face6.jpg" alt="image" class="rounded-circle" />
+                      </div>
+                      <div class="preview-item-content d-flex flex-grow">
+                        <div class="flex-grow">
+                          <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                            <h6 class="preview-subject">Leonard</h6>
+                            <p class="text-muted text-small">5 minutes ago</p>
+                          </div>
+                          <p class="text-muted">Well, it seems to be working now.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview-item border-bottom">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face8.jpg" alt="image" class="rounded-circle" />
+                      </div>
+                      <div class="preview-item-content d-flex flex-grow">
+                        <div class="flex-grow">
+                          <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                            <h6 class="preview-subject">Luella Mills</h6>
+                            <p class="text-muted text-small">10 Minutes Ago</p>
+                          </div>
+                          <p class="text-muted">Well, it seems to be working now.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview-item border-bottom">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face9.jpg" alt="image" class="rounded-circle" />
+                      </div>
+                      <div class="preview-item-content d-flex flex-grow">
+                        <div class="flex-grow">
+                          <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                            <h6 class="preview-subject">Ethel Kelly</h6>
+                            <p class="text-muted text-small">2 Hours Ago</p>
+                          </div>
+                          <p class="text-muted">Please review the tickets</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview-item border-bottom">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face11.jpg" alt="image" class="rounded-circle" />
+                      </div>
+                      <div class="preview-item-content d-flex flex-grow">
+                        <div class="flex-grow">
+                          <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                            <h6 class="preview-subject">Herman May</h6>
+                            <p class="text-muted text-small">4 Hours Ago</p>
+                          </div>
+                          <p class="text-muted">Thanks a lot. It was easy to fix it .</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Portfolio Slide</h4>
+                  <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
+                    id="owl-carousel-basic">
+                    <div class="item">
+                      <img src="images/dashboard/Rectangle.jpg" alt="Rectangle">
+                    </div>
+                    <div class="item">
+                      <img src="images/dashboard/Img_5.jpg" alt="Img_5">
+                    </div>
+                    <div class="item">
+                      <img src="images/dashboard/img_6.jpg" alt="img_6">
+                    </div>
+                  </div>
+                  <div class="d-flex py-4">
+                    <div class="preview-list w-100">
+                      <div class="preview-item p-0">
+                        <div class="preview-thumbnail">
+                          <img src="images/faces/face12.jpg" class="rounded-circle" alt="">
+                        </div>
+                        <div class="preview-item-content d-flex flex-grow">
+                          <div class="flex-grow">
+                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                              <h6 class="preview-subject">CeeCee Bass</h6>
+                              <p class="text-muted text-small">4 Hours Ago</p>
+                            </div>
+                            <p class="text-muted">Well, it seems to be working now.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted">Well, it seems to be working now. </p>
+                  <div class="progress progress-md portfolio-progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Territory Marking</h4>
+                  <div class="add-items d-flex">
+                    <input type="text" class="form-control todo-list-input" placeholder="Next Territory...">
+                    <button class="add btn btn-primary todo-list-add-btn">Add</button>
+                  </div>
+                  <div class="list-wrapper">
+                    <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
+                      <li>
+                        <div class="form-check form-check-primary">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Hunza </label>
+                        </div>
+                        <i class="remove mdi mdi-close-box"></i>
+                      </li>
+                      <li>
+                        <div class="form-check form-check-primary">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Murree </label>
+                        </div>
+                        <i class="remove mdi mdi-close-box"></i>
+                      </li>
+                      <!-- class="completed" -->
+                      <li>
+                        <div class="form-check form-check-primary">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Prepare for presentation </label>
+                        </div>
+                        <i class="remove mdi mdi-close-box"></i>
+                      </li>
+                      <li>
+                        <div class="form-check form-check-primary">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Pir Sohawa </label>
+                        </div>
+                        <i class="remove mdi mdi-close-box"></i>
+                      </li>
+                      <li>
+                        <div class="form-check form-check-primary">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> F10 </label>
+                        </div>
+                        <i class="remove mdi mdi-close-box"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Weekly Routine</h4>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-us"></i> -->
+                                <p>1.</p>
+                              </td>
+                              <td>Friday</td>
+                              <td class="text-end"> 45 km </td>
+                              <td class="text-end font-weight-medium"> 11.2 Km/l </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-de"></i> -->
+                                <p>2.</p>
+                              </td>
+                              <td>Thursday</td>
+                              <td class="text-end"> 110 km </td>
+                              <td class="text-end font-weight-medium"> 14.6 Km/l </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-au"></i> -->
+                                <p>3.</p>
+                              </td>
+                              <td>Wednesday</td>
+                              <td class="text-end"> 21 Km</td>
+                              <td class="text-end font-weight-medium"> 10.5 </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-gb"></i> -->
+                                <p>4.</p>
+                              </td>
+                              <td>Tuesday</td>
+                              <td class="text-end"> 62 Km</td>
+                              <td class="text-end font-weight-medium"> 11.9 Km/l </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-ro"></i> -->
+                                <p>5.</p>
+                              </td>
+                              <td>Monday</td>
+                              <td class="text-end"> 215 Km</td>
+                              <td class="text-end font-weight-medium"> 15.1 Km/l </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <!-- <i class="flag-icon flag-icon-br"></i> -->
+                                <p>6.</p>
+                              </td>
+                              <td>Sunday</td>
+                              <td class="text-end"> 222 Km </td>
+                              <td class="text-end font-weight-medium"> 16.3 Km/l </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div id="audience-map" class="vector-map"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="engineControlView" class="content-wrapper blank-page" style="display: none;">
+          Welcome to Engine Control
+        </div>
+        <div id="blankView" class="content-wrapper blank-page" style="display: none;">
+          Blank view
+        </div>
+        <div id="lightControlView" class="content-wrapper blank-page" style="display: none;">
+          Welcome to Light Control
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024. All rights
+              reserved.</span>
+            <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center"> <span
+                class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                  class="mdi mdi-heart text-danger"></i></span> <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- Plugin js for this page -->
+  <script src="vendors/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/misc.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page -->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page -->
+
+  <script>
+    $(document).on("click", ".custom-nav-link", function (e) {
+      e.preventDefault();
+      $(".custom-nav-link").parent().removeClass("active");
+      $(this).parent().addClass("active");
+
+      $(".content-wrapper").fadeOut();
+      $($(this).attr("data-view-id")).fadeIn();
+    });
+  </script>
+</body>
+
+</html>
