@@ -1,39 +1,17 @@
-(function($) {
+(function ($) {
   'use strict';
-  $.fn.andSelf = function() {
+  $.fn.andSelf = function () {
     return this.addBack.apply(this, arguments);
   }
-  $(function() {
+  $(function () {
 
     //check all boxes in order status 
     $("#check-all").click(function () {
       $(".form-check-input").prop('checked', $(this).prop('checked'));
     });
 
-  
-    if ($('#owl-carousel-basic').length) {
-      $('#owl-carousel-basic').owlCarousel({
-        loop: true,
-        margin: 10,
-        dots: false,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 4500,
-        navText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"],
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 1
-          },
-          1000: {
-            items: 1
-          }
-        }
-      });
-    }
-    if($('#audience-map').length) {
+
+    if ($('#audience-map').length) {
       $('#audience-map').vectorMap({
         map: 'world_mill_en',
         backgroundColor: 'transparent',
@@ -84,7 +62,7 @@
         }
       });
     }
-    if ($("#currentBalanceCircle").length) { 
+    if ($("#currentBalanceCircle").length) {
       var bar = new ProgressBar.Circle(currentBalanceCircle, {
         color: '#ccc',
         // This has to be the same size as the maximum width to
@@ -100,13 +78,13 @@
         from: { color: '#d53f3a', width: 12 },
         to: { color: '#d53f3a', width: 12 },
         // Set default step function for all animate calls
-        step: function(state, circle) {
+        step: function (state, circle) {
           circle.path.setAttribute('stroke', state.color);
           circle.path.setAttribute('stroke-width', state.width);
-      
+
           var value = Math.round(circle.value() * 100);
           circle.setText('');
-      
+
         }
       });
 
